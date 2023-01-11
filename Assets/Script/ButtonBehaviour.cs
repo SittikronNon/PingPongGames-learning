@@ -2,14 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ButtonBehaviour : MonoBehaviour
 {
     public TextMeshProUGUI myText; 
     // Start is called before the first frame update
-    public void OnButtonPressed()
+    public void MoveToScene(int sceneID)
     {
-        myText.text = "Button was pressed";
+        SceneManager.LoadScene(sceneID);
     }
+    
 }
